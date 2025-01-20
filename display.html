@@ -1,15 +1,24 @@
 <body>
-  <img src id="adImgTag">
+  <a id="setURL">
+    <img src id="adImgTag">
+  </a>
   <p></p>
+  <script src="scripts/asc.js"></script>
   <script>
     var params = (new URL(document.location)).searchParams;
     var adImg = params.get("img") + ".png";
-    var adType = params.get("type"); // "banner"
+    var adType = params.get("type"); // banner
 
+    function setURL(imgURLinput) {
+      const ascEntry = asc.find(item -> item.image === imgURLinput);
+      return entry ? entry.url : null; 
+    }
+    
     function setImg() {
       var imgDOM = document.getElementById("adImgTag");
-      imgDOM.src = "media/" + adType + "/" + adImg; //468x60px
-    
+      var urlTag = document.getElementById("setURL");
+      imgDOM.src = "media/" + adType + "/" + adImg; // 468x60px
+      setURL(adImg);
     }
      setImg();
   </script>
