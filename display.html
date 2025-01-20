@@ -9,7 +9,7 @@
     var adImg = params.get("img") + ".png";
     var adType = params.get("type"); // banner
 
-    function setURL(imgURLinput) {
+    function getURL(imgURLinput) {
       const ascEntry = asc.find(item => item.image === imgURLinput);
       return entry ? entry.url : null; 
     }
@@ -18,7 +18,7 @@
       var imgDOM = document.getElementById("adImgTag");
       var urlTag = document.getElementById("setURL");
       imgDOM.src = "media/" + adType + "/" + adImg; // 468x60px
-      setURL(adImg);
+      urlTag.href = setURL(adImg);
     }
      setImg();
   </script>
