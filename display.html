@@ -15,10 +15,10 @@
 
     function getURL(imgURLinput) {
       if (adType == "banner") {
-        const ascEntry = asc_banner.find(item => item.image === imgURLinput);
+        var ascEntry = asc_banner.find(item => item.image === imgURLinput);
       } else {
         if (adType == "large_box") {
-            const ascEntry = asc_large_box.find(item => item.image === imgURLinput);
+            var ascEntry = asc_large_box.find(item => item.image === imgURLinput);
         }
       }
       return ascEntry ? ascEntry.url : null; 
