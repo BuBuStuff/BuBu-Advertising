@@ -4,5 +4,6 @@ var asc_banner = [
 ]
 
 var asc_large_box = [
-  {image: "1.png", url: "https://google.com/"},
+  {image: "1.png", url: "https://google.com/search?q=How+useless+am+I%3F"},
+  {image: "2.png", url: "https://google.com/search?q=Portable+Pee+Bottles"},
 ]
