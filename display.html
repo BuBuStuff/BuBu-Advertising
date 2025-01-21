@@ -32,7 +32,7 @@
       imgDOM.src = "media/" + adType + "/" + adImg; // 468x60px
       urlTag.href = imgURL
       if (imgURL.includes("javascript:")) {
-        urlTag.target = "_self";
+        urlTag.removeAttribute("target");
       }
       document.title = adType + "/" + adImg + " - BuBu Advertizing";
     }
