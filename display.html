@@ -21,14 +21,19 @@
             var ascEntry = asc_large_box.find(item => item.image === imgURLinput);
         }
       }
+      
       return ascEntry ? ascEntry.url : null; 
     }
     
     function setImg() {
       var imgDOM = document.getElementById("adImgTag");
       var urlTag = document.getElementById("setURL");
+      var imgURL = getURL(adImg);
       imgDOM.src = "media/" + adType + "/" + adImg; // 468x60px
-      urlTag.href = getURL(adImg);
+      urlTag.href = imgURL
+      if (imgURL.includes("javascript:")) {
+        urlTag.target = "_self";
+      }
       document.title = adType + "/" + adImg + " - BuBu Advertizing";
     }
      setImg();
