@@ -1,5 +1,5 @@
 var asc_banner = [
-  {image: "1.png", url: "javascript:if (confirm('WARNING: Kami kills.')) {window.open('https://kamiapp.com')} else {return false;}"},
+  {image: "1.png", url: "javascript:if (confirm('WARNING: Kami kills.')) {window.open('https://kamiapp.com')} else {void(0);}"},
   {image: "2.png", url: "https://bubustuff.github.io/ShtOs/"},
 ]
 
