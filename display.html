@@ -27,10 +27,9 @@
     function setImg() {
       var imgDOM = document.getElementById("adImgTag");
       var urlTag = document.getElementById("setURL");
-      var titleEl = document.getElementById("docTitle");
       imgDOM.src = "media/" + adType + "/" + adImg; // 468x60px
       urlTag.href = getURL(adImg);
-      titleEl.innerHTML = adType + "/" + adImg + " - BuBu Advertizing";
+      document.title = adType + "/" + adImg + " - BuBu Advertizing";
     }
      setImg();
   </script>
