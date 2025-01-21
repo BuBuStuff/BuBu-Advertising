@@ -7,10 +7,16 @@
   <script>
     var params = (new URL(document.location)).searchParams;
     var adImg = params.get("img") + ".png";
-    var adType = params.get("type"); // banner
+    var adType = params.get("type"); // banner, large_box
 
     function getURL(imgURLinput) {
-      const ascEntry = asc.find(item => item.image === imgURLinput);
+      if (adType == "banner") {
+        const ascEntry = asc_banner.find(item => item.image === imgURLinput);
+      } else {
+        if (adType == "large_box") {
+            const ascEntry = asc_large_box.find(item => item.image === imgURLinput);
+        }
+      }
       return ascEntry ? ascEntry.url : null; 
     }
     
