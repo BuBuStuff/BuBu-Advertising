@@ -7,12 +7,14 @@
     <img src id="adImgTag">
   </a>
   <p></p>
-  <script src="scripts/asc.js"></script>
+  <script src="scripts/asc.js">console.log("Database loaded");</script>
   <script>
     var params = (new URL(document.location)).searchParams;
     var adImg = params.get("img") + ".png";
     var adType = params.get("type"); // banner, large_box
-
+    console.log("Params: " + params);
+    console.log("Image: " + adImg + " (" + adType + ")");
+    
     function getURL(imgURLinput) {
       if (adType == "banner") {
         var ascEntry = asc_banner.find(item => item.image === imgURLinput);
@@ -29,13 +31,19 @@
       var imgDOM = document.getElementById("adImgTag");
       var urlTag = document.getElementById("setURL");
       var imgURL = getURL(adImg);
-      imgDOM.src = "media/" + adType + "/" + adImg; // 468x60px
-      urlTag.href = imgURL
+      console.log("Associated URL: " + imgURL);
+      imgDOM.src = "media/" + adType + "/" + adImg;
+      console.log("Image set");
+      urlTag.href = imgURL;
+      console.log("URL set");      
       if (imgURL.includes("javascript:")) {
+        console.log("JavaScript URL detected");
         urlTag.removeAttribute("target");
       }
       document.title = adType + "/" + adImg + " - BuBu Advertizing";
+      console.log("Document title set");
     }
      setImg();
+    console.log("Operation complete");
   </script>
 </body>
