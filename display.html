@@ -1,6 +1,6 @@
 <head>
-  <title>Display Page - BuBu Advertizing</title>
-  <meta name="description" content="BuBu Advertizing - Non-Commercial Advertizing. We hate Chromebooks. Software powered by boredom, delayed by school.">
+  <title>Display Page - BuBu Advertising</title>
+  <meta name="description" content="BuBu Advertising - Non-Commercial Advertising. We hate Chromebooks. Software powered by boredom, delayed by school.">
 </head>
 <body>
   <a id="setURL" target="_blank">
@@ -38,10 +38,11 @@
       urlTag.href = imgURL;
       console.log("URL set");      
       if (imgURL.includes("javascript:")) {
-        console.log("JavaScript URL detected");
+        console.log("JavaScript detected");
         urlTag.removeAttribute("target");
+        console.log("Attributes optimized");
       }
-      document.title = adType + "/" + adImg + " - BuBu Advertizing";
+      document.title = adType + "/" + adImg + " - BuBu Advertising";
       console.log("Document title set");
     }
      setImg();
